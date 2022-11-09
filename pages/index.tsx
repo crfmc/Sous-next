@@ -1,20 +1,19 @@
-import Head from 'next/head';
-import styles from '../styles/Home.module.css';
+import Head from "next/head";
 
 export default function Home() {
   return (
-    <div className={styles.container}>
+    <div className="container">
       <Head>
         <title>Sous</title>
         <meta name="description" content="" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
 
-      <main className={styles.main}>
-        Hello! I'm Sous.
+      <main className="main">
+        Hello! I&apos;m Sous.
       </main>
 
-      <footer className={styles.footer}></footer>
+      <footer className="footer"></footer>
     </div>
   )
 }
