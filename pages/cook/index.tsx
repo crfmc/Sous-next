@@ -7,9 +7,6 @@ export default function Cook() {
         Welcome to the best cooking app in the world.
       </h1>
       <h2>What would you like to cook today?</h2>
-      <a>Tutorial</a>
-      <a>Inventory</a>
-      <a>Get cooking!</a>
     </div>
   )
 }
