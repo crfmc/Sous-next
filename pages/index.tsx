@@ -10,7 +10,10 @@ export default function Home() {
       </Head>
 
       <main className="main">
-        Hello! I&apos;m Sous.
+        <h1>Hello! I&apos;m Sous.</h1>
+        <a>Tutorial</a>
+        <a>Inventory</a>
+        <a>Get cooking!</a>
       </main>
 
       <footer className="footer"></footer>
