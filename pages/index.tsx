@@ -20,14 +20,18 @@ export default function Home() {
       </Head>
 
       <main className="">
-        <Navigation
-          sticky={true}
-          links={ NavigationLinks }
-        />
-        <h1>Hello! I&apos;m Sous.</h1>
-        <a>Tutorial</a>
-        <a>Inventory</a>
-        <a>Get cooking!</a>
+
+        <Navigation sticky={true} links={NavigationLinks} />
+
+        <section className="">
+
+          <h1>Hello! I&apos;m Sous.</h1>
+          <a>Tutorial</a>
+          <a>Inventory</a>
+          <a>Get cooking!</a>
+
+        </section>
+
       </main>
 
       <footer className=""></footer>
