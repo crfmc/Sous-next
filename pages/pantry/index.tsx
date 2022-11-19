@@ -1,3 +1,9 @@
+/**
+ * /pantry page, where a user can see the ingredients available to them.
+ * 
+ * Note: must add a route which deals primarily with importing data on
+ * ingredients and inventory.
+ */
 import Head from 'next/head';
 
 export default function Inventory() {
