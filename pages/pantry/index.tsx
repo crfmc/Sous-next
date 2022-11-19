@@ -7,8 +7,8 @@
 import Head from 'next/head';
 
 export default function Inventory() {
-  function handleClick(e: Event) {
-    console.log("button clicked", e);
+  function handleClick() {
+    console.log("button clicked");
   }
   return (
     <>
@@ -17,7 +17,7 @@ export default function Inventory() {
       <p>Select an ingredient to edit it's quantity.</p>
 
 
-      <button>First time here? Here's a short tutorial!</button>
+      <button onClick={() => handleClick()}>First time here? Here's a short tutorial!</button>
     </>
   );
 }
