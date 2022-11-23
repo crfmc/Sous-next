@@ -1,0 +1,76 @@
+// temporary
+html {
+    position: fixed;
+    width: 100%;
+}
+
+.stepper {
+    // top-level container
+    &-container {
+        position: absolute;
+        overflow-y: scroll;
+        scroll-snap-type: mandatory;
+        width: 100%;
+        height: 400px;
+        background-color: white;
+        padding-top: 20px;
+        padding-bottom: 20px;
+
+        // test
+        // display: flex;
+        // align-items: center;
+        // justify-content: space-between;
+        // flex-flow: column nowrap;
+        // font-family: monospace;
+    }
+
+    &-overlay {
+        background-color: black;
+        height: 50px;
+        width: 100%;
+        .top {
+            color: black
+        }
+        .bottom {
+
+        }
+    }
+
+    &-text {
+        height: 2000px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-between;
+        flex-flow: column nowrap;
+        font-size: 25px;
+        margin: auto;
+        text-align: center;
+        scroll-snap-type: y mandatory;
+        overflow: auto;
+
+        @media (prefers-color-scheme: dark) {
+            background-color: black;
+        }
+
+        // line-height: 50px;
+        font-size: 50px;
+        width: 256px;
+        height: 100%;
+
+        border: 1px solid black;
+        // width: 256px;
+        // height: 256px;
+        flex-flow: column nowrap;
+
+        &-block {
+            text-align: center;
+            scroll-snap-align: center;
+            flex: none;
+            margin: auto;
+            margin-top: 200px;
+            // margin-bottom: 100px;
+
+        }
+    }
+}
