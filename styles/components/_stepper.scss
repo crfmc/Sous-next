@@ -8,19 +8,14 @@ html {
     // top-level container
     &-container {
         position: absolute;
+        display: flex;
         overflow-y: scroll;
         scroll-snap-type: mandatory;
         width: 100%;
+        height: 500px;
         background-color: white;
         padding-top: 20px;
         padding-bottom: 20px;
-
-        // test
-        // display: flex;
-        // align-items: center;
-        // justify-content: space-between;
-        // flex-flow: column nowrap;
-        // font-family: monospace;
     }
 
     &-overlay {
@@ -35,22 +30,18 @@ html {
     }
 
     &-text {
-        height: 100%;
         display: flex;
         flex-direction: column;
-        // justify-content: space-between;
         flex-flow: column nowrap;
+        width: 80%;
+        height: 400px;
         font-size: 20px;
         margin: auto;
-        // text-align: center;
         scroll-snap-type: y mandatory;
-        overflow: hidden;
-        width: 80%;
-        // height: 100%;
+        overflow-y: scroll;
+        // overflow-y: visible;
 
         border: 1px solid black;
-        // width: 256px;
-        // height: 256px;
         flex-flow: column nowrap;
 
         @media (prefers-color-scheme: dark) {
@@ -58,13 +49,25 @@ html {
 
 
         &-block {
-            text-align: center;
+            text-align: left;
             scroll-snap-align: center;
             flex: none;
             margin: auto;
             height: 100px;
-            // margin-top: 200px;
+            margin-top: 100px;
+            margin-bottom: 100px;
             color: red;
+
+            &:first-of-type {
+                margin-top: 150px;
+            }
+            &:last-of-type {
+                margin-bottom: 150px;
+            }
+
+            &::marker {
+                // content: "Step";
+            }
             
             // margin-bottom: 100px;
 
