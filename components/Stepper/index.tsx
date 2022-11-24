@@ -9,17 +9,17 @@ export default function Stepper() {
             {/* <div className="stepper-overlay top"></div>
             <div className="stepper-overlay bottom"></div> */}
             {/* MUST TURN THIS INTO UL FOR ACCESSIBILITY */}
-            <div className="stepper-text" dir="ltr">
-                <div className="stepper-text-block">Step 0: Prepare the materials.</div>
+            <ol className="stepper-text" dir="ltr">
+                <li className="stepper-text-block"><p>Step 0: Prepare the materials.</p></li>
 
-                <div className="stepper-text-block">Step 1: Break the egg into a bowl</div>
+                <li className="stepper-text-block"><p>Step 1: Break the egg into a bowl</p></li>
 
-                <div className="stepper-text-block">Step 2: Add Salt</div>
+                <li className="stepper-text-block"><p>Step 2: Add Salt</p></li>
 
-                <div className="stepper-text-block">Step 3: Add Pepper</div>
+                <li className="stepper-text-block"><p>Step 3: Add Pepper</p></li>
 
-                <div className="stepper-text-block">Step 4: Whisk ingredients in bowl</div>
-            </div>
+                <li className="stepper-text-block"><p>Step 4: Whisk ingredients in bowl</p></li>
+            </ol>
 
             <div className="stepper-controls">
                 <a href="#">Next</a>
