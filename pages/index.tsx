@@ -8,7 +8,9 @@ export interface NavigationLink {
 }
 
 const NavigationLinks: NavigationLink[] = [
-  { title: "Link1", href: "/" }
+  { title: "Link1", href: "/1" },
+  { title: "Link2", href: "/2" },
+  { title: "Link3", href: "/3" },
 ]
 
 export default function Home() {
