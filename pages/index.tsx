@@ -8,9 +8,9 @@ export interface NavigationLink {
 }
 
 const NavigationLinks: NavigationLink[] = [
-  { title: "Link1", href: "/1" },
-  { title: "Link2", href: "/2" },
-  { title: "Link3", href: "/3" },
+  { title: "Tutorial", href: "/1" },
+  { title: "Inventory", href: "/2" },
+  { title: "Get Cooking", href: "/3" },
 ]
 
 export default function Home() {
@@ -24,15 +24,9 @@ export default function Home() {
 
       <main className="">
 
-        {/* <Navigation sticky={true} links={NavigationLinks} /> */}
+        <Navigation sticky={true} links={NavigationLinks} />
 
         <section className="">
-
-          {/* <h1>Hello! I&apos;m Sous.</h1>
-          <a>Tutorial</a>
-          <a>Inventory</a>
-          <a>Get cooking!</a> */}
-
 
           <Stepper />
 
