@@ -22,6 +22,7 @@
   },
   "devDependencies": {
     "sass": "^1.56.0",
-    "typedoc": "^0.23.21"
+    "typedoc": "^0.23.21",
+    "zod": "^3.19.1"
   }
 }
