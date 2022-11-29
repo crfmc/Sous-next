@@ -4,7 +4,10 @@
  * Note: must add a route which deals primarily with importing data on
  * ingredients and inventory.
  */
+import Navigation, { DefaultNavigationLinks } from '../../components/Navigation';
 import Head from 'next/head';
+
+
 
 export default function Inventory() {
   function handleClick() {
@@ -12,6 +15,7 @@ export default function Inventory() {
   }
   return (
     <>
+      <Navigation sticky={ true } links={ DefaultNavigationLinks } />
       <h1>Welcome to your inventory</h1>
       <p>This is a place where you can update your kitchen inventory.</p>
       <p>Select an ingredient to edit it's quantity.</p>
