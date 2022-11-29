@@ -1,13 +1,33 @@
 import { AppProps } from "next/app";
-import { NavigationLink } from '../pages/index';
+import Link from 'next/link';
+import { z } from 'zod';
+
+const NavigationLink = z.object({
+  title: z.string().optional(),
+  href: z.string()
+});
+
+type NavigationLink = z.infer<typeof NavigationLink>;
+
+const NavigationProps = z.object({
+  sticky: z.boolean().default(true),
+  links: z.array(NavigationLink)
+});
+
+type NavigationProps = z.infer<typeof NavigationProps>;
+
+export const DefaultNavigationLinks: NavigationLink[] = [
+  { title: "Pantry", href: "/pantry" },
+  { title: "Get Cooking", href: "/cook" },
+]
 
 const NavigationLinkFactory = ({ title, href } : NavigationLink) => {
   return (
-    <a href={ href }>{ title }</a>
+    <Link href={ href }>{ title }</Link>
   )
 }
 
-export default function Navigation({ sticky, links }: { sticky: boolean, links: NavigationLink[] } ) {
+export default function Navigation({ sticky, links } : NavigationProps ) {
   return (
     <nav className={ sticky ? "sticky" : "" }>
       {
