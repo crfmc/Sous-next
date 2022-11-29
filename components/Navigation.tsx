@@ -6,20 +6,24 @@ const NavigationLink = z.object({
   title: z.string().optional(),
   href: z.string()
 });
-
 type NavigationLink = z.infer<typeof NavigationLink>;
 
-const NavigationProps = z.object({
-  sticky: z.boolean().default(true),
-  links: z.array(NavigationLink)
-});
-
-type NavigationProps = z.infer<typeof NavigationProps>;
-
 export const DefaultNavigationLinks: NavigationLink[] = [
+  { title: "Sous", href: "/" },
   { title: "Pantry", href: "/pantry" },
   { title: "Get Cooking", href: "/cook" },
-]
+];
+
+const NavigationProps = z.object({
+  sticky: z.boolean(),
+  links: z.array(NavigationLink)
+});
+type NavigationProps = z.infer<typeof NavigationProps>;
+
+const DefaultNavigationProps: NavigationProps = {
+  sticky: true,
+  links: DefaultNavigationLinks
+}
 
 const NavigationLinkFactory = ({ title, href } : NavigationLink) => {
   return (
@@ -37,4 +41,6 @@ export default function Navigation({ sticky, links } : NavigationProps ) {
       }
     </nav>
   );
-}
+};
+
+Navigation.defaultProps = DefaultNavigationProps;
