@@ -1,17 +1,5 @@
 import Head from "next/head";
-import Navigation from "../components/Navigation";
-import Stepper from "../components/Stepper";
-
-export interface NavigationLink {
-  title?: string;
-  href: string;
-}
-
-const NavigationLinks: NavigationLink[] = [
-  { title: "Tutorial", href: "/1" },
-  { title: "Inventory", href: "/2" },
-  { title: "Get Cooking", href: "/3" },
-]
+import Navigation, { DefaultNavigationLinks } from "../components/Navigation";
 
 export default function Home() {
   return (
@@ -24,11 +12,9 @@ export default function Home() {
 
       <main className="">
 
-        <Navigation sticky={true} links={NavigationLinks} />
+        <Navigation sticky={ false } links={ DefaultNavigationLinks } />
 
         <section className="">
-
-          <Stepper />
 
         </section>
 
