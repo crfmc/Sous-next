@@ -1,16 +1,39 @@
-nav {
-  height: 80px;
-  background-color: white;
+.navigation {
+  display: flex;
+  justify-content: space-between;
+  height: 50px;
   width: 100%;
-  padding: 20px;
-  color: white;
+  background-color: white;
+  padding: 0px 20px 0px 100px;
 
+  &-list { // ul
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    list-style-type: none;
+    margin: 0;
 
-  a {
-    color: black;
+    &-item { // li
+      display: flex;
+      justify-content: center;
+      height: 100%;
+      width: 100%;
+
+      &-link { // a
+        margin: auto;
+        
+        &-title { // span
+          
+
+          &:hover {
+            font-weight: bold;
+          }
+        }
+      }
+    }
   }
 
-  // sticky variant
+  // sticky mutation
   &.sticky {
     position: fixed;
 
