@@ -15,30 +15,39 @@ export const DefaultNavigationLinks: NavigationLink[] = [
 ];
 
 const NavigationProps = z.object({
-  sticky: z.boolean(),
+  mut: z.string(),// [mut] refers to classes that mutates the component
   links: z.array(NavigationLink)
 });
 type NavigationProps = z.infer<typeof NavigationProps>;
 
 const DefaultNavigationProps: NavigationProps = {
-  sticky: true,
+  mut: "top",
   links: DefaultNavigationLinks
 }
 
 const NavigationLinkFactory = ({ title, href } : NavigationLink) => {
   return (
-    <Link href={ href }>{ title }</Link>
+    <Link className="navigation-list-item-link" href={ href }>
+      <span className="navigation-list-item-link-title">
+        { title }
+      </span>
+    </Link>
   )
 }
 
-export default function Navigation({ sticky, links } : NavigationProps ) {
+export default function Navigation({ mut, links } : NavigationProps ) {
   return (
-    <nav className={ sticky ? "sticky" : "" }>
-      {
-        links.map(({ title, href } : NavigationLink, i : number) => {
-          return (<NavigationLinkFactory title={ title } href={ href } key={ i } />)
-        })
-      }
+    <nav className={ 'navigation' + ' ' + mut } aria-label="Page Navigation">
+      <ul className="navigation-list">
+        {
+          links.map(({ title, href } : NavigationLink, i : number) => {
+            return (
+              <li className="navigation-list-item">
+                <NavigationLinkFactory title={ title } href={ href } key={ i } />
+              </li>
+          )})
+        }
+      </ul>
     </nav>
   );
 };
