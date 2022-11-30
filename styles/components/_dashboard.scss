@@ -1,0 +1,80 @@
+@use '../themes/variables';
+
+.dashboard {
+  width: 96%;
+  height: 92%;
+  margin: auto;
+  display: flex;
+  justify-content: center;
+  background-color: white;
+  border-radius: 25px;
+  box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.25);
+
+  &-container {
+    // margin-top: 20px;
+    margin: auto;
+    width: 96%;
+    height: 94%;
+
+    .welcome {
+      width: 100%;
+      height: 100%;
+      background-color: white;
+      display: flex;
+      justify-content: center;
+      
+      &-container {
+        width: 100%;
+        display: flex;
+        justify-content: center;
+
+        &-content {
+          margin: auto;
+          &-text {
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            width: 100%;
+            height: auto;
+            margin: auto;
+            text-align: center;
+            
+            h1 {
+              font-size: 60px;
+              margin: auto auto 50px auto;
+            }
+            span {
+              font-size: 35px;
+              background-color: variables.$sec50;
+              padding: 30px 70px;
+              margin: auto;
+              border-radius: 25px;
+              color: black;
+              box-shadow: none;
+              transition-property: color, background-color, box-shadow;
+              transition-duration: 0.1s;
+      
+              &:hover {
+                cursor: pointer;
+                color: white;
+                background-color: variables.$sec;
+                box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.5);
+              }
+            }
+          }
+        }
+      }
+
+    }
+
+    &-content {
+      // margin: 20px 10px;
+      width: 100%;
+      height: 100%;
+
+      h1 {
+        margin: 0;
+      }
+    }
+  }
+}
