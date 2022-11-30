@@ -1,0 +1,37 @@
+// This stylesheet consists of utility classes that are used throughout the
+// Sous program. These classes are not specific to any one component, but
+// are used in multiple places.
+
+// Breakpoints
+$xxl: 1500px;
+$xl: 1200px;
+$lg: 992px;
+$md: 768px;
+$sm: 576px;
+$xs: 360px;
+
+
+.mw {
+  margin: auto;
+  @media (min-width: $xxl) {
+    max-width: 1400px;
+  }
+  @media (min-width: $xl) and (max-width: $xxl) {
+    max-width: 1200px;
+  }
+  @media (min-width: $lg) and (max-width: $xl) {
+    max-width: 992px;
+  }
+  @media (min-width: $md) and (max-width: $lg) {
+    max-width: 768px;
+  }
+  @media (min-width: $sm) and (max-width: $md) {
+    max-width: 576px;
+  }
+  @media (min-width: $xs) and (max-width: $sm) {
+    max-width: 360px;
+  }
+  @media (max-width: $xs) {
+    max-width: 320px;
+  }
+}
