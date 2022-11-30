@@ -42,8 +42,8 @@ export default function Navigation({ mut, links } : NavigationProps ) {
         {
           links.map(({ title, href } : NavigationLink, i : number) => {
             return (
-              <li className="navigation-list-item">
-                <NavigationLinkFactory title={ title } href={ href } key={ i } />
+              <li  key={ i } className="navigation-list-item">
+                <NavigationLinkFactory title={ title } href={ href } />
               </li>
           )})
         }
