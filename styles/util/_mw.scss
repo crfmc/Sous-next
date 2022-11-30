@@ -3,6 +3,7 @@
 // are used in multiple places.
 
 // Breakpoints
+$xxxl: 1700px;
 $xxl: 1500px;
 $xl: 1200px;
 $lg: 992px;
@@ -13,25 +14,28 @@ $xs: 360px;
 
 .mw {
   margin: auto;
-  @media (min-width: $xxl) {
-    max-width: 1400px;
+  @media (min-width: $xxxl) {
+      max-width: 1650px;
+    }
+  @media (min-width: $xxl) and (max-width: $xxxl) { // 25px margin on each side
+    max-width: 1450px;
   }
-  @media (min-width: $xl) and (max-width: $xxl) {
-    max-width: 1200px;
+  @media (min-width: $xl) and (max-width: $xxl) { // 25px margin on each side
+    max-width: 1150px;
   }
-  @media (min-width: $lg) and (max-width: $xl) {
-    max-width: 992px;
+  @media (min-width: $lg) and (max-width: $xl) { // 25px margin on each side
+    max-width: 942px;
   }
-  @media (min-width: $md) and (max-width: $lg) {
-    max-width: 768px;
+  @media (min-width: $md) and (max-width: $lg) { // 25px margin on each side
+    max-width: 718px;
   }
-  @media (min-width: $sm) and (max-width: $md) {
-    max-width: 576px;
+  @media (min-width: $sm) and (max-width: $md) { // 20px margin on each side
+    max-width: 536px;
   }
-  @media (min-width: $xs) and (max-width: $sm) {
-    max-width: 360px;
+  @media (min-width: $xs) and (max-width: $sm) { // 15px margin on each side
+    max-width: 330px;
   }
-  @media (max-width: $xs) {
-    max-width: 320px;
+  @media (max-width: $xs) { // 15px margin on each side
+    max-width: 330px;
   }
 }
