@@ -1,21 +1,24 @@
 import Head from "next/head";
-import Navigation, { DefaultNavigationLinks } from "../components/Navigation";
+import Navigation from "../components/Navigation";
+import Dashboard from "../components/Dashboard";
+import Footer from "../components/Footer";
 
 export default function Home() {
   return (
-    <div className="">
+    <div className="home">
       <Head>
         <title>Sous</title>
         <meta name="description" content="" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
 
-      <main className="">
+      {/* Main content for the page */}
+      <main className="home-container">
 
-        <Navigation sticky={ false } links={ DefaultNavigationLinks } />
+        {/* <Navigation mut="sticky" /> */}
 
-        <section className="">
-
+        <section className="home-container-content">
+          <Dashboard />
         </section>
 
       </main>
