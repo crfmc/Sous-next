@@ -1,4 +1,16 @@
-@import 'components/navigation';
+// Import page-specific styles
 @import 'pages/home';
-@import '_globals';
+@import 'pages/cook';
+@import 'pages/login';
+@import 'pages/pantry';
+
+// Import component-specific styles
+@import 'components/navigation';
 @import 'components/stepper';
+
+// Import utility classes
+@import 'util/mw';
+
+
+// Import Global Styles
+@import 'globals';
