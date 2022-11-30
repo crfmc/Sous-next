@@ -1,10 +1,11 @@
 .navigation {
   display: flex;
   justify-content: space-between;
-  height: 50px;
+  height: 100px;
   width: 100%;
   background-color: white;
   padding: 0px 20px 0px 100px;
+
 
   &-list { // ul
     display: flex;
@@ -23,6 +24,7 @@
         margin: auto;
         
         &-title { // span
+          font-size: 21px;
           
 
           &:hover {
@@ -36,6 +38,13 @@
   // sticky mutation
   &.sticky {
     position: fixed;
+    top: 0;
+    opacity: 0.8;
+    transition-property: opacity;
+    transition-duration: 0.5s;
 
+    &:hover {
+      opacity: 1;
+    }
   }
 }
