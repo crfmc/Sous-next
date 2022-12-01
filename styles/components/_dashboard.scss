@@ -7,16 +7,17 @@
   display: flex;
   justify-content: center;
   background-color: white;
-  border-radius: 25px;
+  border-radius: 40px;
   box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.25);
 
   &-container {
-    // margin-top: 20px;
+    position: relative;
     margin: auto;
     width: 96%;
     height: 94%;
 
     .welcome {
+      position: absolute;
       width: 100%;
       height: 100%;
       background-color: white;
@@ -40,8 +41,9 @@
             text-align: center;
             
             h1 {
+              color: black;
               font-size: 60px;
-              margin: auto auto 50px auto;
+              margin: auto auto 40px auto;
             }
             span {
               font-size: 35px;
@@ -57,7 +59,7 @@
               &:hover {
                 cursor: pointer;
                 color: white;
-                background-color: variables.$sec;
+                background-color: variables.$ter;
                 box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.5);
               }
             }
@@ -71,9 +73,76 @@
       // margin: 20px 10px;
       width: 100%;
       height: 100%;
+      display: flex;
 
-      h1 {
-        margin: 0;
+      &-left {
+        .dashnav {
+            display: flex;
+            flex-direction: column;
+            height: 100%;
+            width: 250px;
+            margin-right: 20px;
+            background-color: white;
+            border-radius: 20px;
+            padding: 40px 20px;
+            box-shadow: inset 0 0 10px 0px rgba(0, 0, 0, 0.1);
+            // box-shadow: 0 0 10px 0px rgba(0, 0, 0, 0.10);
+
+            transition-duration: 1s;
+        
+            &:hover {
+              box-shadow: inset 0 0 10px 0px rgba(0, 0, 0, 0.15), 0 0 10px 0px rgba(0, 0, 0, 0.05);
+            }
+
+            &-container {
+              &-content {
+                &-profile {
+                  display: flex;
+                  flex-direction: column;
+                  justify-content: center;
+                  &-avi {
+                    margin: auto;
+                    border-radius: 100%;
+                    border: 2px solid black;
+                    width: 60%;
+                  }
+
+                  &-name {
+                    color: black;
+                    font-size: 25px;
+                    text-align: center;
+                    font-weight: bold;
+                    margin: 20px auto 0 auto;
+
+                  }
+
+                  &-username {
+                    color: rgba(0, 0, 0, 0.5);
+                    font-size: 16px;
+                    text-align: center;
+                    font-weight: bold;
+                    margin: 5px auto 0 auto;
+                  }
+                }
+                &-navigation {
+                  &-list {
+                    margin: 0;
+                  }
+                }
+              }
+            }
+          }
+      }
+      &-right {
+        width: 100%;
+        background-color: white;
+        border-radius: 20px;
+        padding: 20px;
+        box-shadow: inset 0 0 10px 0px rgba(0, 0, 0, 0.1);
+        transition-property: box-shadow;
+        h1 {
+          margin: 0;
+        }
       }
     }
   }
