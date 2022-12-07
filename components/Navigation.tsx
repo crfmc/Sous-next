@@ -1,3 +1,12 @@
+/**
+ * This function creates a Navigation component. It creates a Navigation
+ * whose elements are defined through the links prop, [links] as well as the
+ * mutations, [mut] props.
+ * 
+ * It is finally styled depending on the props [NavigationProps] passed to
+ * it from the parent component.
+ */
+
 import { AppProps } from "next/app";
 import Link from 'next/link';
 import { z } from 'zod';
