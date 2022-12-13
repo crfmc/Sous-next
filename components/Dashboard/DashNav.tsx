@@ -29,10 +29,10 @@ export default function DashNav() {
    }, [])
 
   return (
-    <div className="dashnav">
+    <div className={ expandDashNav ? "dashnav expanded" : "dashnav collapsed" }>
       <div className="dashnav-container">
         <div className="dashnav-container-content">
-          {/* <button onClick={() => setShowDashNav(false)}>{showDashNav ? "<" : ">"}</button> */}
+          <button onClick={() => setExpandDashNav(!expandDashNav)}>{expandDashNav ? "->" : "<-"}</button>
           <div className="dashnav-container-content-profile">
             <img className="dashnav-container-content-profile-avi" src={data.aviSrc} />
             <p className="dashnav-container-content-profile-name">{data.firstName + ' ' + data.lastName}</p>
