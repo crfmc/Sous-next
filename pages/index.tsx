@@ -9,7 +9,7 @@ export default function Home() {
       <Head>
         <title>Sous</title>
         <meta name="description" content="" />
-        <link rel="icon" href="/favicon.ico" />
+        <link rel="icon" href="/sous-notext.svg" />
       </Head>
 
       {/* Main content for the page */}
