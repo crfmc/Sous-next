@@ -5,7 +5,7 @@ import { useEffect, useState } from "react";
 
 
 export default function DashNav() {
-  const [expandDashNav, setExpandDashNav] = useState(true);
+  const [expandDashNav, setExpandDashNav] = useState(false);
   const [data, setData] = useState({
     aviSrc: "",
     firstName: "",
@@ -32,11 +32,13 @@ export default function DashNav() {
     <div className={ expandDashNav ? "dashnav expanded" : "dashnav collapsed" }>
       <div className="dashnav-container">
         <div className="dashnav-container-content">
-          <button onClick={() => setExpandDashNav(!expandDashNav)}>{expandDashNav ? "->" : "<-"}</button>
           <div className="dashnav-container-content-profile">
-            <img className="dashnav-container-content-profile-avi" src={data.aviSrc} />
-            <p className="dashnav-container-content-profile-name">{data.firstName + ' ' + data.lastName}</p>
-            <p className="dashnav-container-content-profile-username">{'@' + data.username}</p>
+            <img className="dashnav-container-content-profile-avi" src={data.aviSrc} onClick={() => setExpandDashNav(!expandDashNav)} />
+            <div className="dashnav-container-content-profile-text">
+              <p className="dashnav-container-content-profile-text-name">{data.firstName + ' ' + data.lastName}</p>
+              <p className="dashnav-container-content-profile-text-username">{'@' + data.username}
+              </p>
+            </div>
           </div>
           <nav className="dashnav-container-content-navigation" aria-label="Page Navigation">
             <ul className="dashnav-container-content-navigation-list">
