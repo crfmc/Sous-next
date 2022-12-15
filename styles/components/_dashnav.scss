@@ -1,0 +1,102 @@
+.dashnav {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    width: 250px;
+    margin-right: 20px;
+    background-color: white;
+    padding: 40px 20px;
+    box-shadow: inset 0 0 10px 0px rgba(0, 0, 0, 0.1);
+    // box-shadow: 0 0 10px 0px rgba(0, 0, 0, 0.10);
+    transition-property: width;
+    transition-duration: 100ms;
+
+    &:hover {
+        box-shadow: inset 0 0 10px 0px rgba(0, 0, 0, 0.15), 0 0 10px 0px rgba(0, 0, 0, 0.05);
+    }
+
+    &-container {
+        &-content {
+            &-toggle {
+                background-color: black;
+                color: white;
+                width: 40px;
+                height: 40px;
+            }
+            &-profile {
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+
+
+                &-avi {
+                    // position: absolute;
+                    margin: auto;
+                    border-radius: 100%;
+                    border: 2px solid black;
+                    width: 100px;
+                    
+                    &:hover {
+                        cursor: pointer;
+                    }
+                }
+
+                &-text {
+                    visibility: visible;
+                    transition-property: visibility 1s, opacity 0.5s linear;
+
+                    &-name {
+                        color: black;
+                        font-size: 25px;
+                        text-align: center;
+                        font-weight: bold;
+                        margin: 20px auto 0 auto;
+    
+                    }
+    
+                    &-username {
+                        color: rgba(0, 0, 0, 0.5);
+                        font-size: 16px;
+                        text-align: center;
+                        font-weight: bold;
+                        margin: 5px auto 0 auto;
+                    }
+                }
+            }
+            &-navigation {
+                &-list {
+                    margin: 0;
+                }
+            }
+        }
+    }
+
+    // Mutated states for the DashNav
+    &.collapsed {
+        width: 100px;
+
+        .dashnav {
+            &-container {
+                &-content {
+                    &-profile {
+                        &-avi {
+                            margin: auto;
+                            width: 50px;
+                            // position: absolute;
+                        }
+                        &-text {
+                            position: absolute;
+                            visibility: hidden;
+                            opacity: 0;
+
+                            &-name {
+                            }
+                            &-username {
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
