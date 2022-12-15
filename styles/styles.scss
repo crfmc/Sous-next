@@ -1,17 +1,14 @@
 // Import page-specific styles
-@import 'pages/home';
-@import 'pages/cook';
-@import 'pages/login';
-@import 'pages/pantry';
+@import 'pages/index';
 
 // Import component-specific styles
-@import 'components/navigation';
-@import 'components/stepper';
-@import 'components/dashboard';
+@import 'components/index';
 
 // Import utility classes
-@import 'util/mw';
+@import 'util/index';
 
+// Import themes
+@import 'themes/variables';
 
 // Import Global Styles
 @import 'globals';
