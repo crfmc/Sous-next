@@ -2,6 +2,7 @@ import { AppProps } from "next/app";
 import Link from 'next/link';
 import { z } from 'zod';
 import { useEffect, useState } from "react";
+import Navigation from "../Navigation";
 
 
 export default function DashNav() {
@@ -33,7 +34,7 @@ export default function DashNav() {
       <div className="dashnav-container">
         <div className="dashnav-container-content">
           <div className="dashnav-container-content-profile">
-            <div className="dashnav-container-content-profile-avi" onClick={() => setExpandDashNav(!expandDashNav)} >
+            <div className="dashnav-container-content-profile-avi br-5" onClick={() => setExpandDashNav(!expandDashNav)} >
               <img className="dashnav-container-content-profile-avi-image" src={data.aviSrc} />
             </div>
             <div className="dashnav-container-content-profile-text">
@@ -43,9 +44,11 @@ export default function DashNav() {
             </div>
           </div>
           <nav className="dashnav-container-content-navigation" aria-label="Page Navigation">
-            <ul className="dashnav-container-content-navigation-list">
-
-            </ul>
+            <Navigation mut="dashnac" />
+            {/* <ul className="dashnav-container-content-navigation-list">
+              <li>
+              </li>
+            </ul> */}
           </nav>
         </div>
       </div>
