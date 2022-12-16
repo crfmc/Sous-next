@@ -45,7 +45,14 @@
 
                 &-text {
                     visibility: visible;
-                    transition-property: visibility 1s, opacity 0.5s linear;
+                    opacity: 1;
+                    transition: visibility 1s, opacity 500ms;
+
+                    
+
+                    &:active {
+                        color: red;
+                    }
                     // transition: font-size 200ms;
 
                     &-name {
@@ -88,9 +95,9 @@
                             // position: absolute;
                         }
                         &-text {
-                            position: absolute;
-                            visibility: hidden;
                             opacity: 0;
+                            visibility: hidden;
+                            transition: none;
 
                             &-name {
                             }
