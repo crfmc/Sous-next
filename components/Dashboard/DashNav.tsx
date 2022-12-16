@@ -33,7 +33,9 @@ export default function DashNav() {
       <div className="dashnav-container">
         <div className="dashnav-container-content">
           <div className="dashnav-container-content-profile">
-            <img className="dashnav-container-content-profile-avi" src={data.aviSrc} onClick={() => setExpandDashNav(!expandDashNav)} />
+            <div className="dashnav-container-content-profile-avi" onClick={() => setExpandDashNav(!expandDashNav)} >
+              <img className="dashnav-container-content-profile-avi-image" src={data.aviSrc} />
+            </div>
             <div className="dashnav-container-content-profile-text">
               <p className="dashnav-container-content-profile-text-name">{data.firstName + ' ' + data.lastName}</p>
               <p className="dashnav-container-content-profile-text-username">{'@' + data.username}
