@@ -34,7 +34,7 @@ export default function DashNav() {
       <div className="dashnav-container">
         <div className="dashnav-container-content">
           <div className="dashnav-container-content-profile">
-            <div className="dashnav-container-content-profile-avi br-5" onClick={() => setExpandDashNav(!expandDashNav)} >
+            <div className="dashnav-container-content-profile-avi" onClick={() => setExpandDashNav(!expandDashNav)} >
               <img className="dashnav-container-content-profile-avi-image" src={data.aviSrc} />
             </div>
             <div className="dashnav-container-content-profile-text">
@@ -43,13 +43,13 @@ export default function DashNav() {
               </p>
             </div>
           </div>
-          <nav className="dashnav-container-content-navigation" aria-label="Page Navigation">
-            <Navigation mut="dashnac" />
+          <div className="dashnav-container-content-navigation" aria-label="Page Navigation">
+            <Navigation mut={expandDashNav ? "dash-expanded" : "dash-collapsed"} />
             {/* <ul className="dashnav-container-content-navigation-list">
               <li>
               </li>
             </ul> */}
-          </nav>
+          </div>
         </div>
       </div>
 

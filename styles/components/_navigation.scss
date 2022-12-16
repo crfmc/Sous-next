@@ -1,3 +1,5 @@
+@use '../themes/variables' as v;
+
 .navigation {
   display: flex;
   justify-content: space-between;
@@ -45,6 +47,47 @@
 
     &:hover {
       opacity: 1;
+    }
+  }
+
+  // The navigation shown on the dashboard
+  &.dash {
+
+    &-collapsed {
+      background-color: black;
+    }
+    &-expanded {
+      padding: 0;
+      height: auto;
+      width: 100%;
+
+      .navigation-list {
+        flex-direction: column;
+        padding: 0;
+
+        &-item {
+          margin: 30px auto;
+          padding: 40px 0;
+
+          &:hover {
+            cursor: pointer;
+            background-color: v.$qui;
+            border-radius: 5px;
+            transition: background-color 150ms;
+            color: white;
+          }
+
+          &-link {
+            &-title {
+              font-size: 25px;
+
+              &:hover {
+                font-weight: normal;
+              }
+            }
+          }
+        }
+      }
     }
   }
 }
