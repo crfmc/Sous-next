@@ -19,8 +19,8 @@ type NavigationLink = z.infer<typeof NavigationLink>;
 
 export const DefaultNavigationLinks: NavigationLink[] = [
   { title: "Sous", href: "/" },
-  { title: "Pantry", href: "/pantry" },
-  { title: "Get Cooking", href: "/cook" },
+  { title: "Pantry", href: "/" },
+  { title: "Cook", href: "/" },
 ];
 
 const NavigationProps = z.object({
