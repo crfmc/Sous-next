@@ -9,10 +9,15 @@ export default function Content() {
       </section>
       <main className="dashboard-container-content-right">
         <div className="dashboard-container-content-header">
-          <h1 className="dashboard-container-content-header">Dashboard content</h1>
+          <h1 className="dashboard-container-content-header-text">Dashboard content</h1>
         </div>
         <div className="dashboard-container-content-body">
-          <Card name="Omelette" />
+          <section className="dashboard-container-content-body-section">
+            <Card title="Zucchini" />
+            <Card title="Orange" />
+            <Card title="Feta Cheese" />
+            <Card title="Bulgur" />
+          </section>
         </div>
       </main>
     </div>
