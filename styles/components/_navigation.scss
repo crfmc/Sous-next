@@ -50,6 +50,22 @@
     }
   }
 
+
+  // The navigation shown on the dashboard
+  &.login {
+    height: 50px;
+    .navigation-list {
+      &-item {
+        &-link {
+          &-title {
+            color: black;
+            font-size: 18px;
+          }
+        }
+      }
+    }
+  }
+
   // The navigation shown on the dashboard
   &.dash {
 
