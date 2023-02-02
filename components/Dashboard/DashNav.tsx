@@ -3,6 +3,7 @@ import Link from 'next/link';
 import { z } from 'zod';
 import { useEffect, useState } from "react";
 import Navigation from "../Navigation";
+import Image from "next/image";
 
 
 export default function DashNav() {
@@ -35,7 +36,7 @@ export default function DashNav() {
         <div className="dashnav-container-content">
           <div className="dashnav-container-content-profile">
             <div className="dashnav-container-content-profile-avi" onClick={() => setExpandDashNav(!expandDashNav)} >
-              <img className="dashnav-container-content-profile-avi-image" src={data.aviSrc} />
+              <Image className="dashnav-container-content-profile-avi-image" src={data.aviSrc} alt={data.firstName + "'s Avatar"} />
             </div>
             <div className="dashnav-container-content-profile-text">
               <p className="dashnav-container-content-profile-text-name">{data.firstName + ' ' + data.lastName}</p>
