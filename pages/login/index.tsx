@@ -8,9 +8,12 @@ export default function Login() {
       <Head>
         
       </Head>
-      <Navigation sticky={false} links={[]}></Navigation>
-      <div className="background"></div>
-      
+      <div className="background">
+        
+        <Navigation mut={"login"} links={[{title: "About", href: "/about"}]}></Navigation>
+
+      </div>
+
     </div>
   )
 }
