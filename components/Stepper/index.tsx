@@ -4,10 +4,13 @@ import React, { useState } from "react"
 export default function Stepper() {
     const [step, setStep] = useState(0);
 
-    function handleClick(e : React.MouseEvent) {
-        e.preventDefault();
-        console.log('clicked', e);
-        // switch (e.target.)
+    function handleClickPrev(e : React.MouseEvent) {
+        console.log(e.target);
+        setStep(step - 1);
+    }
+
+    function handleClickNext(e : React.MouseEvent) {
+        setStep(step + 1);
     }
 
     return (
@@ -15,15 +18,15 @@ export default function Stepper() {
 
             <ol className="stepper-text" start={0} dir="ltr">
                 <div className="stepper-overlay top"></div>
-                <li data-step={0} className="stepper-text-block focused"><p>Prepare the materials.</p></li>
+                <li id="0" data-step={0} className="stepper-text-block focused"><p>Prepare the materials.</p></li>
 
-                <li data-step={1} className="stepper-text-block"><p>Break the egg into a bowl</p></li>
+                <li id="1" data-step={1} className="stepper-text-block"><p>Break the egg into a bowl</p></li>
 
-                <li data-step={2} className="stepper-text-block"><p>Add Salt</p></li>
+                <li id="2" data-step={2} className="stepper-text-block"><p>Add Salt</p></li>
 
-                <li data-step={3} className="stepper-text-block"><p>Add Pepper</p></li>
+                <li id="3" data-step={3} className="stepper-text-block"><p>Add Pepper</p></li>
 
-                <li data-step={4} className="stepper-text-block"><p>Whisk ingredients in bowl</p></li>
+                <li id="4" data-step={4} className="stepper-text-block"><p>Whisk ingredients in bowl</p></li>
                 <div className="stepper-overlay bottom"></div>
             </ol>
 
@@ -31,13 +34,15 @@ export default function Stepper() {
             <div className="stepper-controls">
                 {/* Make links accessible */}
                 <a 
-                    onClick={ (e) => handleClick(e) }
+                    onClick={ (e) => handleClickPrev(e) }
+                    href={"" + (step - 1)}
                     className="stepper-controls-link prevStep"
                     >
                         <span className="stepper-controls-link-text prevStep-text">Previous</span>
                 </a>
                 <a 
-                    onClick={ (e) => handleClick(e) } 
+                    onClick={ (e) => handleClickNext(e) }
+                    href="#1"
                     className="stepper-controls-link nextStep"
                 >
                     <span className="stepper-controls-link-text prevStep-text">Next</span>
