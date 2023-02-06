@@ -7,6 +7,7 @@ export default function Home() {
   return (
     <div className="home">
       <Head>
+        <html lang="en"></html>
         <title>Sous</title>
         <meta name="description" content="" />
         <link rel="icon" href="/sous-notext.svg" />
