@@ -16,10 +16,10 @@ export default function Home() {
       {/* Main content for the page */}
       <main className="home-container">
 
-        {/* <Navigation mut="sticky" /> */}
+        <Navigation mut="sm-toggleNav" />
 
         <section className="home-container-content">
-          <Dashboard />
+          {/* <Dashboard /> */}
         </section>
 
       </main>

@@ -10,6 +10,8 @@
 import { AppProps } from "next/app";
 import Link from 'next/link';
 import { z } from 'zod';
+import NavigationToggle from './NavigationToggle';
+import { useState } from 'react';
 
 const NavigationLink = z.object({
   title: z.string().optional(),
@@ -44,10 +46,27 @@ const NavigationLinkFactory = ({ title, href } : NavigationLink) => {
   )
 }
 
-export default function Navigation({ mut, links } : NavigationProps ) {
+/**
+ * Under mid size:
+ *  - navigation list hidden
+ *  - can be toggled on
+ */
+
+export default function Navigation({ mut, links }: NavigationProps) {
+  const [showMobileNav, setShowMobileNav] = useState(false);
+
+  // Add toggle mutation on state change
+  if (showMobileNav) {
+    mut += " toggle-open"
+  }
+
   return (
-    <nav className={ 'navigation' + ' ' + mut } aria-label="Page Navigation">
-      <ul className="navigation-list">
+    <nav className={'navigation' + ' ' + mut} aria-label="Page Navigation">
+      <NavigationToggle
+        showMobileNav={ showMobileNav }
+        setShowMobileNav={ setShowMobileNav }
+      />
+      <ul className={ showMobileNav ? 'navigation-list toggle-open' : 'navigation-list'}>
         {
           links.map(({ title, href } : NavigationLink, i : number) => {
             return (
