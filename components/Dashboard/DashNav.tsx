@@ -31,19 +31,19 @@ export default function DashNav() {
    }, [])
 
   return (
-    <div className={ expandDashNav ? "dashnav expanded" : "dashnav collapsed" }>
+    <div className={ expandDashNav ? "dashnav expanded" : "dashnav collapsed" } role="navigation">
       <div className="dashnav-container">
         <div className="dashnav-container-content">
-          <div className="dashnav-container-content-profile">
-            <div className="dashnav-container-content-profile-avi" onClick={() => setExpandDashNav(!expandDashNav)} >
-              <Image className="dashnav-container-content-profile-avi-image" src={data.aviSrc} alt={data.firstName + "'s Avatar"} />
-            </div>
+         { data.aviSrc === "" ? <p>Loading...</p> : <div className="dashnav-container-content-profile">
+            <button className="dashnav-container-content-profile-avi" onClick={() => setExpandDashNav(!expandDashNav)} >
+              <img className="dashnav-container-content-profile-avi-image" src={data.aviSrc} alt={data.firstName + "'s Avatar"} />
+            </button>
             <div className="dashnav-container-content-profile-text">
               <p className="dashnav-container-content-profile-text-name">{data.firstName + ' ' + data.lastName}</p>
               <p className="dashnav-container-content-profile-text-username">{'@' + data.username}
               </p>
             </div>
-          </div>
+          </div>}
           <div className="dashnav-container-content-navigation" aria-label="Page Navigation">
             <Navigation mut={expandDashNav ? "dash-expanded" : "dash-collapsed"} />
             {/* <ul className="dashnav-container-content-navigation-list">
