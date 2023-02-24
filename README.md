@@ -32,7 +32,7 @@ The purpose of Sous is to give users an interactive cooking assistant. It has 3 
 
 The user, as I imagine them, has a number of reasons preventing them from cooking at home. Some of these primary reasons:
 
-- Time. They are pressed for time and don't have the motivation, or
+- _Time_. They are pressed for time and don't have the motivation, or
   the sheer opportunity to cook.
 - _Materials_. Many people find themselves lacking the particular
   kitchenware to accomplish cooking a recipe. While particular tools are
