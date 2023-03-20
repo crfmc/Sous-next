@@ -15,6 +15,11 @@ export default function Inventory() {
   }
   return (
     <>
+      <Head>
+        <title>Sous | Pantry</title>
+        <meta name="description" content="" />
+        <link rel="icon" href="/sous-notext.svg" />
+      </Head>
       <Navigation sticky={ true } links={ DefaultNavigationLinks } />
       <h1>Welcome to your inventory</h1>
       <p>This is a place where you can update your kitchen inventory.</p>

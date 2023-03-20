@@ -6,7 +6,9 @@ export default function Cook() {
   return (
     <div>
       <Head>
-        
+        <title>Sous | Cook</title>
+        <meta name="description" content="" />
+        <link rel="icon" href="/sous-notext.svg" />
       </Head>
       <Navigation />
       <h1>
