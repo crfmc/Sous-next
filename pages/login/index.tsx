@@ -6,6 +6,9 @@ export default function Login() {
   return (
     <div className="container">
       <Head>
+        <title>Sous | Login</title>
+        <meta name="description" content="" />
+        <link rel="icon" href="/sous-notext.svg" />
         
       </Head>
       <div className="background">

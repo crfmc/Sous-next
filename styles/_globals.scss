@@ -3,7 +3,8 @@
 
 html {
   @media (prefers-color-scheme: dark) {
-    @include v.$DarkTheme($DarkTheme: true);
+  //   @include v.$DarkTheme($DarkTheme: true);
+  background-color: black;
   }
 }
 
