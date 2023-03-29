@@ -1,11 +1,12 @@
+// Import utility classes
+@import 'util/index';
+
 // Import page-specific styles
 @import 'pages/index';
 
 // Import component-specific styles
 @import 'components/index';
 
-// Import utility classes
-@import 'util/index';
 
 // Import themes
 @import 'themes/index';

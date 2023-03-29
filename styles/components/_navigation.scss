@@ -272,11 +272,13 @@
           bottom: 0;
           right: 0;
           padding: 0 25px;
+          @include dark(color, black);
           
           .toggle-button {
             margin-left: auto;
             border: none;
             border-radius: 5px 5px 0 0;
+            padding: 4px 5px;
 
             &-line {
               &.middle {
@@ -293,6 +295,7 @@
             }
             
             &:hover {
+              @include dark(color, white);
               .top {
                 width: 18px;
               } 

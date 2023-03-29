@@ -2,10 +2,7 @@
 
 
 html {
-  @media (prefers-color-scheme: dark) {
-  //   @include v.$DarkTheme($DarkTheme: true);
-  background-color: black;
-  }
+  @include dark(background-color, black);
 }
 
 
