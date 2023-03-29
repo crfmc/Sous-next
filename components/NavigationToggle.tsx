@@ -1,9 +1,12 @@
-import { useState } from 'react';
+import { z } from 'zod';
 
-interface NavigationToggleProps {
-  showMobileNav: boolean,
-  setShowMobileNav: (arg0: boolean) => void
-}
+const NavigationToggleProps = z.object({
+  showMobileNav: z.boolean(),
+  setShowMobileNav: z.function().args(z.boolean()).returns(z.void())
+});
+  
+
+type NavigationToggleProps = z.infer<typeof NavigationToggleProps>;
 
 
 export default function NagivationToggle({ showMobileNav, setShowMobileNav } : NavigationToggleProps) {
