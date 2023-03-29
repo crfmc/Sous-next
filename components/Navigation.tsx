@@ -15,7 +15,7 @@ import { useState } from 'react';
 
 const NavigationLink = z.object({
   title: z.string().optional(),
-  href: z.string()
+  href: z.string(),
 });
 type NavigationLink = z.infer<typeof NavigationLink>;
 
@@ -53,7 +53,7 @@ const NavigationLinkFactory = ({ title, href } : NavigationLink) => {
  */
 
 export default function Navigation({ mut, links }: NavigationProps) {
-  const [showMobileNav, setShowMobileNav] = useState(false);
+  const [showMobileNav, setShowMobileNav] = useState<boolean>(false);
 
   // Add toggle mutation on state change
   if (showMobileNav) {
