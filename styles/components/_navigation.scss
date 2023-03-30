@@ -272,9 +272,9 @@
           bottom: 0;
           right: 0;
           padding: 0 25px;
-          @include dark(color, black);
           
           .toggle-button {
+            @include dark(color, black);
             margin-left: auto;
             border: none;
             border-radius: 5px 5px 0 0;
@@ -291,16 +291,6 @@
               &.bottom {
                 transform: translate(0, -4px) rotate(-45deg);
                 -webkit-transform-origin: 50%  51%;
-              }
-            }
-            
-            &:hover {
-              @include dark(color, white);
-              .top {
-                width: 18px;
-              } 
-              .bottom {
-                width: 18px;
               }
             }
           }

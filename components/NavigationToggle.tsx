@@ -34,7 +34,7 @@ export default function NagivationToggle({ showMobileNav, setShowMobileNav } : N
         onClick={() => setShowMobileNav(!showMobileNav)}
         className="toggle-button"
         >
-        <svg className="toggle-button-close" width="100%" height="100%" viewBox="0 0 100% 100%">
+        <svg className="logo toggle-button-close" width="100%" height="100%" viewBox="0 0 100% 100%">
           <line x1="30%" x2="70%" y1="30%" y2="70%" stroke="currentColor" stroke-width="2" stroke-linecap="round"></line>
           <line x1="30%" x2="70%" y1="70%" y2="30%" stroke="currentColor" stroke-width="2" stroke-linecap="round"></line>
         </svg>

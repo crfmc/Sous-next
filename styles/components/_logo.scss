@@ -1,4 +1,13 @@
 .logo {
     height: 100%;
     width: 100%;
+
+    &.toggle-button {
+        &-open {
+            @include dark(color, black);
+        }
+        &-close {
+            @include dark(color, black);
+        }
+    }
 }
